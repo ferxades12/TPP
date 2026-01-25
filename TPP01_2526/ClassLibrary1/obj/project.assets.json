@@ -8,24 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ferxa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\bydoc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\ClassLibrary1.csproj",
+      "projectUniqueName": "D:\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\ClassLibrary1.csproj",
       "projectName": "ClassLibrary1",
-      "projectPath": "C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\ClassLibrary1.csproj",
-      "packagesPath": "C:\\Users\\ferxa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\obj\\",
+      "projectPath": "D:\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\ClassLibrary1.csproj",
+      "packagesPath": "C:\\Users\\bydoc\\.nuget\\packages\\",
+      "outputPath": "D:\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ferxa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+        "C:\\Users\\bydoc\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

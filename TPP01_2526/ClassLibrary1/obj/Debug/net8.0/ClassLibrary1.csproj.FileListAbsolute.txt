@@ -10,3 +10,15 @@ C:\Users\ferxa\OneDrive\Documents\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\
 C:\Users\ferxa\OneDrive\Documents\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\refint\ClassLibrary1.dll
 C:\Users\ferxa\OneDrive\Documents\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.pdb
 C:\Users\ferxa\OneDrive\Documents\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\ref\ClassLibrary1.dll
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\bin\Debug\net8.0\ClassLibrary1.deps.json
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\bin\Debug\net8.0\ClassLibrary1.dll
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\bin\Debug\net8.0\ClassLibrary1.pdb
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.AssemblyInfoInputs.cache
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.AssemblyInfo.cs
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.csproj.CoreCompileInputs.cache
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.sourcelink.json
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.dll
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\refint\ClassLibrary1.dll
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\ClassLibrary1.pdb
+D:\Programacion\TPP\TPP01_2526\ClassLibrary1\obj\Debug\net8.0\ref\ClassLibrary1.dll
