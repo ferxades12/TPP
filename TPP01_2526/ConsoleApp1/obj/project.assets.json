@@ -11,6 +11,16 @@
         "runtime": {
           "bin/placeholder/ClassLibrary1.dll": {}
         }
+      },
+      "LinkedList/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/LinkedList.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LinkedList.dll": {}
+        }
       }
     }
   },
@@ -19,32 +29,33 @@
       "type": "project",
       "path": "../ClassLibrary1/ClassLibrary1.csproj",
       "msbuildProject": "../ClassLibrary1/ClassLibrary1.csproj"
+    },
+    "LinkedList/1.0.0": {
+      "type": "project",
+      "path": "../LinkedList/LinkedList.csproj",
+      "msbuildProject": "../LinkedList/LinkedList.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "ClassLibrary1 >= 1.0.0"
+      "ClassLibrary1 >= 1.0.0",
+      "LinkedList >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ferxa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\bydoc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "D:\\Programacion\\TPP\\TPP01_2526\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ConsoleApp1\\ConsoleApp1.csproj",
-      "packagesPath": "C:\\Users\\ferxa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ConsoleApp1\\obj\\",
+      "projectPath": "D:\\Programacion\\TPP\\TPP01_2526\\ConsoleApp1\\ConsoleApp1.csproj",
+      "packagesPath": "C:\\Users\\bydoc\\.nuget\\packages\\",
+      "outputPath": "D:\\Programacion\\TPP\\TPP01_2526\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ferxa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+        "C:\\Users\\bydoc\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -56,8 +67,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\ClassLibrary1.csproj": {
-              "projectPath": "C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\ClassLibrary1.csproj"
+            "D:\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\ClassLibrary1.csproj": {
+              "projectPath": "D:\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\ClassLibrary1.csproj"
+            },
+            "D:\\Programacion\\TPP\\TPP01_2526\\LinkedList\\LinkedList.csproj": {
+              "projectPath": "D:\\Programacion\\TPP\\TPP01_2526\\LinkedList\\LinkedList.csproj"
             }
           }
         }

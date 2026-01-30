@@ -1,5 +1,7 @@
-﻿namespace ConsoleApp1;
-using ClassLibrary1;
+﻿using ClassLibrary1;
+using LL;
+
+namespace ConsoleApp1;
 class Program
 {
     static void Main(string[] args)
@@ -18,5 +20,24 @@ class Program
             TarifaPorNoche = 120.0M,
             RegimenComidas = MealPlan.MediaPension
         };
+
+        LinkedList lista = new LinkedList();
+        
+        lista.Add(42);                                      
+        lista.Add("str");                          
+        lista.Add(c2);                                      
+        
+        Console.WriteLine($"Elementos en la lista: {lista.Count}:");
+        for (int i = 0; i < lista.Count; i++)
+        {
+            Console.WriteLine($"{lista.ElementAt(i)}");
+        }
+        
+        lista.Insert(1, "nuevo");
+        Console.WriteLine($"Elementos en la lista: {lista.Count}:");
+        Console.WriteLine($"{lista.ElementAt(1)}");
+        
+        lista.Set(0, 100);
+        Console.WriteLine($"{lista.ElementAt(0)}");
     }
 }

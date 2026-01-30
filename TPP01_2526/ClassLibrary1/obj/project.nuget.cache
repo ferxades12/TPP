@@ -1,12 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "5vhy47SrEZE=",
+  "dgSpecHash": "f0Dzis3s+TM=",
   "success": true,
   "projectFilePath": "C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\ClassLibrary1.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ferxa\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.12\\microsoft.netcore.app.ref.9.0.12.nupkg.sha512",
-    "C:\\Users\\ferxa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.12\\microsoft.windowsdesktop.app.ref.9.0.12.nupkg.sha512",
-    "C:\\Users\\ferxa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.12\\microsoft.aspnetcore.app.ref.9.0.12.nupkg.sha512"
-  ],
-  "logs": []
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\ClassLibrary1.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ferxa\\OneDrive\\Documents\\Programacion\\TPP\\TPP01_2526\\ClassLibrary1\\ClassLibrary1.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
