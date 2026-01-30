@@ -20,7 +20,7 @@ class Program
         Console.WriteLine(notaFinal);      
 
         //¿Qué devuelve LeerNombre?
-        string nombre = LeerNombre();
+        string? nombre = LeerNombre();
 
         //Fíjate en el ?. Se denomina operador de acceso condicional. ¿Cómo funciona?            
         int longitud = nombre?.Length ?? 0;
@@ -29,7 +29,7 @@ class Program
         Console.WriteLine($"Longitud del nombre: {longitud}");
 
         //¿ Por qué es mejor utilizar Equals(nombre,"Pepe") ?
-        if (nombre.Equals("Pepe")) 
+        if (Equals(nombre, "Pepe")) 
             Console.WriteLine("¡Bienvenido Pepe!");
 
         /*
@@ -42,7 +42,7 @@ class Program
     /// Fíjate en el warning
     /// </summary>
     /// <returns></returns>
-    static string LeerNombre()
+    static string? LeerNombre()
     {
         if (r.Next(0,100) >  50)
             return null; //¿Qué ocurre?

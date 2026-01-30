@@ -33,4 +33,44 @@ public static class Extensores
         return new string(buffer);
     }
 
+    public static int ContarVocales(this string mensaje)
+    {
+        int count = 0;
+        string vocals = "aeiouAEIOU";
+
+        foreach(char letter in mensaje)
+        {
+            if (vocals.Contains(letter))
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+
+    public static int Minimo(this int[] param)
+    {
+        int min = int.MaxValue;
+
+        foreach(int d in param)
+        {
+            if(d < min) min = d;
+        }
+
+        return min;
+    }
+
+    public static double Media(this double[] param)
+    {
+        double media = 0;
+
+        foreach(double d in param)
+        {
+            media += d;
+        }
+
+        return media / param.Length;
+    }
 }

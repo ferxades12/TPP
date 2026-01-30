@@ -49,6 +49,20 @@ class Program
             que reciba un array de object con elementos de distintos tipos (int, string, double)
             y devuelva cuántos de esos elementos son string.
         */
+
+        static int ContarStrings(object[] items)
+        {
+            int count = 0;
+            foreach(object ob in items)
+            {
+                if (ob is string)
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        }
     }
 
     static int Unboxing(object o)
