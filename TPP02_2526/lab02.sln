@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InmutableList", "InmutableList\InmutableList.csproj", "{1A2C2615-D35E-4291-BD6E-9964B2C27C9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inmutable Test", "Inmutable Test\Inmutable Test.csproj", "{2FBB9E9A-989D-4638-BDD2-21134E50A800}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,18 @@ Global
 		{1A2C2615-D35E-4291-BD6E-9964B2C27C9A}.Release|x64.Build.0 = Release|Any CPU
 		{1A2C2615-D35E-4291-BD6E-9964B2C27C9A}.Release|x86.ActiveCfg = Release|Any CPU
 		{1A2C2615-D35E-4291-BD6E-9964B2C27C9A}.Release|x86.Build.0 = Release|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Debug|x64.Build.0 = Debug|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Debug|x86.Build.0 = Debug|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Release|x64.ActiveCfg = Release|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Release|x64.Build.0 = Release|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Release|x86.ActiveCfg = Release|Any CPU
+		{2FBB9E9A-989D-4638-BDD2-21134E50A800}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
