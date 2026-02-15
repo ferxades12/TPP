@@ -18,7 +18,7 @@ public class SortedList
     }
 
     public void Add(IComparable item){
-        for (int i = 0; list.ElementAt(i) != null; i++){
+        for (int i = 0; i < list.Count; i++){
             if (item.CompareTo(ElementAt(i)) < 0){
                 list.Insert(i, item);
                 return;
