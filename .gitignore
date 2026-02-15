@@ -69,6 +69,17 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
+# .NET auto-generated files
+**/obj/**/*.cache
+**/obj/**/*.AssemblyInfo.cs
+**/obj/**/*.AssemblyInfoInputs.cache
+**/obj/**/*GeneratedMSBuildEditorConfig.editorconfig
+**/obj/**/*.GlobalUsings.g.cs
+**/bin/**/*.cache
+*.nuget.dgspec.json
+*.nuget.g.props
+*.nuget.g.targets
+
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
 
