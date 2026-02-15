@@ -1,0 +1,50 @@
+﻿namespace tpp;
+
+
+public class SortedList
+{
+    private LinkedList list;
+
+    public SortedList(){
+        list = new LinkedList();
+    }
+
+    public int Count
+    {
+        get
+        {
+            return list.Count;
+        }
+    }
+
+    public void Add(IComparable item){
+        for (int i = 0; list.ElementAt(i) != null; i++){
+            if (item.CompareTo(ElementAt(i)) < 0){
+                list.Insert(i, item);
+                return;
+            }
+        }
+
+        list.Add(item);
+    }
+
+    public object ElementAt(int index){
+        return list.ElementAt(index);
+    }
+
+    public bool Contains(object item){
+        return list.Contains(item);
+    }
+
+    public bool Remove(object item){
+        return list.Remove(item);
+    }
+
+    public void RemoveAt(int index){
+        list.RemoveAt(index);
+    }
+
+    public void Clear(){
+        list.Clear();
+    }
+}
