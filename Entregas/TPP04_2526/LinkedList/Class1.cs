@@ -6,7 +6,7 @@ namespace LL;
 public class Node<T>
 {
     public T Data {get; set;}
-    public Node<T> Next {get; set;}
+    public Node<T>? Next {get; set;}
 
     public Node(T data)
     {
@@ -17,7 +17,7 @@ public class Node<T>
 
 public class LinkedList<T> : IEnumerable<T>
 {
-    private Node<T> head;
+    private Node<T>? head;
 
     public int Count {get; private set;}
 
@@ -169,11 +169,11 @@ public class LinkedList<T> : IEnumerable<T>
 }
 
 class LLEnumerator<T> : IEnumerator<T> {
-    private Node<T> head;
-    private Node<T> current;
+    private Node<T>? head;
+    private Node<T>? current;
     private bool started;
 
-    public LLEnumerator(Node<T> head) {
+    public LLEnumerator(Node<T>? head) {
         this.head = head;
         this.current = null;
         this.started = false;
@@ -187,7 +187,7 @@ class LLEnumerator<T> : IEnumerator<T> {
         }
     }
 
-    object IEnumerator.Current {get{return Current;}}
+    object? IEnumerator.Current {get{return Current;}}
     
     public bool MoveNext(){
         if (!started) {
