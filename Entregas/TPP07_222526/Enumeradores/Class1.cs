@@ -1,5 +1,6 @@
-﻿namespace OS;
-public class Program
+﻿namespace Enumeradores;
+
+public class Enumeradores
 {
     public static IEnumerable<T2> Map<T1, T2>(IEnumerable<T1> secuencia, Func<T1, T2> funcion)
     {
@@ -26,17 +27,6 @@ public class Program
         return secuenciaResultante;
     }
 
-    public static T2? Reduce<T1, T2>(IEnumerable<T1> secuencia, Func<T1, T2?, T2> funcion)
-    {
-        T2? acc = default;
-
-        foreach (T1 elemento in secuencia)
-        {
-            acc = funcion(elemento, acc);
-        }
-        return acc;
-    }
-    
     public static IEnumerable<T3>  Zip<T1, T2, T3>(IEnumerable<T1> secuencia1, IEnumerable<T2> secuencia2, Func<T1, T2, T3> funcion)
     {
         IList<T3> secuenciaResultante = new List<T3>();
@@ -50,9 +40,4 @@ public class Program
         return secuenciaResultante;
     }
 
-
-    public static void Main()
-    {
-
-    }
 }
