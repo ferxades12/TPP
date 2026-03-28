@@ -2,56 +2,55 @@
 
 public class InmutableList
 {
-    private readonly object[] arr;
+    private readonly object?[] arr;
 
     public int Count
     {
-        get
-        {
-            return arr.Length;
-        }
+        get { return arr.Length; }
     }
-
 
     public InmutableList()
     {
         arr = [];
     }
 
-    private InmutableList(object[] arr)
+    private InmutableList(object?[] arr)
     {
         this.arr = arr;
     }
 
-    public InmutableList Add(object item)
+    public InmutableList Add(object? item)
     {
-        object[] nuevo = new object[Count + 1];
+        object?[] nuevo = new object?[Count + 1];
         Array.Copy(arr, nuevo, Count);
         nuevo[Count] = item;
 
         return new InmutableList(nuevo);
     }
 
-    public object ElementAt(int index)
+    public object? ElementAt(int index)
     {
         return arr[index];
     }
 
-    public InmutableList Set(int index, object item){
+    public InmutableList Set(int index, object? item)
+    {
         if (index < 0 || index >= Count)
             throw new IndexOutOfRangeException();
-            
-        object[] nuevo = new object[Count];
+
+        object?[] nuevo = new object?[Count];
         Array.Copy(arr, nuevo, Count);
         nuevo[index] = item;
 
-        return new InmutableList(nuevo);    
-    }  
-    public InmutableList Insert(int index, object item){
+        return new InmutableList(nuevo);
+    }
+
+    public InmutableList Insert(int index, object? item)
+    {
         if (index < 0 || index > Count)
             throw new IndexOutOfRangeException();
-    
-        object[] nuevo = new object[Count + 1];
+
+        object?[] nuevo = new object?[Count + 1];
         Array.Copy(arr, 0, nuevo, 0, index);
         nuevo[index] = item;
         Array.Copy(arr, index, nuevo, index + 1, Count - index);
@@ -59,9 +58,12 @@ public class InmutableList
         return new InmutableList(nuevo);
     }
 
-    public bool Contains(object item){
-        foreach(object ob in arr){
-            if (Equals(item, ob)){
+    public bool Contains(object? item)
+    {
+        foreach (object? ob in arr)
+        {
+            if (Equals(item, ob))
+            {
                 return true;
             }
         }
@@ -69,7 +71,8 @@ public class InmutableList
         return false;
     }
 
-    public InmutableList Remove(object item){        
+    public InmutableList Remove(object? item)
+    {
         int index = -1;
         for (int i = 0; i < arr.Length; i++)
         {
@@ -79,18 +82,20 @@ public class InmutableList
                 break;
             }
         }
-        if (index == -1) return this;
+        if (index == -1)
+            return this;
         return RemoveAt(index);
     }
 
-    public InmutableList RemoveAt(int index){
+    public InmutableList RemoveAt(int index)
+    {
         if (index < 0 || index >= Count)
             throw new IndexOutOfRangeException();
-            
-        object[] nuevo = new object[arr.Length - 1];
 
-        Array.Copy(arr, 0, nuevo, 0, index); 
-        Array.Copy(arr, index + 1, nuevo, index, arr.Length - index - 1); 
+        object?[] nuevo = new object?[arr.Length - 1];
+
+        Array.Copy(arr, 0, nuevo, 0, index);
+        Array.Copy(arr, index + 1, nuevo, index, arr.Length - index - 1);
 
         return new InmutableList(nuevo);
     }

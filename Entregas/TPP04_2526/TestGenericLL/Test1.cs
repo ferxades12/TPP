@@ -1,10 +1,10 @@
-namespace TestGenericLL;
+namespace GenericLinkedList;
 
 [TestClass]
 public sealed class Test1
 {
     #region Add Tests
-    
+
     [TestMethod]
     public void Add_SingleElement_CountIsOne()
     {
@@ -72,7 +72,7 @@ public sealed class Test1
         list.Add("primero");
         list.Add("segundo");
         list.Add("tercero");
-        
+
         Assert.AreEqual("primero", list.ElementAt(0));
         Assert.AreEqual("segundo", list.ElementAt(1));
         Assert.AreEqual("tercero", list.ElementAt(2));
@@ -83,7 +83,7 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         list.Add(10);
-        
+
         try
         {
             list.ElementAt(-1);
@@ -100,7 +100,7 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         list.Add(10);
-        
+
         try
         {
             list.ElementAt(5);
@@ -116,7 +116,7 @@ public sealed class Test1
     public void ElementAt_EmptyList_ThrowsException()
     {
         var list = new LL.LinkedList<int>();
-        
+
         try
         {
             list.ElementAt(0);
@@ -167,7 +167,7 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         list.Add(10);
-        
+
         try
         {
             list.Set(-1, 100);
@@ -184,7 +184,7 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         list.Add(10);
-        
+
         try
         {
             list.Set(5, 100);
@@ -207,7 +207,7 @@ public sealed class Test1
         list.Add(20);
         list.Add(30);
         list.Insert(0, 10);
-        
+
         Assert.AreEqual(3, list.Count);
         Assert.AreEqual(10, list.ElementAt(0));
         Assert.AreEqual(20, list.ElementAt(1));
@@ -221,7 +221,7 @@ public sealed class Test1
         list.Add(10);
         list.Add(30);
         list.Insert(1, 20);
-        
+
         Assert.AreEqual(3, list.Count);
         Assert.AreEqual(10, list.ElementAt(0));
         Assert.AreEqual(20, list.ElementAt(1));
@@ -235,7 +235,7 @@ public sealed class Test1
         list.Add(10);
         list.Add(20);
         list.Insert(2, 30);
-        
+
         Assert.AreEqual(3, list.Count);
         Assert.AreEqual(30, list.ElementAt(2));
     }
@@ -245,7 +245,7 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         list.Insert(0, 10);
-        
+
         Assert.AreEqual(1, list.Count);
         Assert.AreEqual(10, list.ElementAt(0));
     }
@@ -255,7 +255,7 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         list.Add(10);
-        
+
         try
         {
             list.Insert(-1, 5);
@@ -272,7 +272,7 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         list.Add(10);
-        
+
         try
         {
             list.Insert(5, 100);
@@ -295,7 +295,7 @@ public sealed class Test1
         list.Add(10);
         list.Add(20);
         list.Add(30);
-        
+
         Assert.IsTrue(list.Contains(20));
     }
 
@@ -305,7 +305,7 @@ public sealed class Test1
         var list = new LL.LinkedList<int>();
         list.Add(10);
         list.Add(20);
-        
+
         Assert.IsFalse(list.Contains(100));
     }
 
@@ -323,7 +323,7 @@ public sealed class Test1
         list.Add("primero");
         list.Add(null);
         list.Add("tercero");
-        
+
         Assert.IsTrue(list.Contains(null));
     }
 
@@ -333,7 +333,7 @@ public sealed class Test1
         var list = new LL.LinkedList<string?>();
         list.Add("primero");
         list.Add("segundo");
-        
+
         Assert.IsFalse(list.Contains(null));
     }
 
@@ -344,7 +344,7 @@ public sealed class Test1
         list.Add("uno");
         list.Add("dos");
         list.Add("tres");
-        
+
         Assert.IsTrue(list.Contains("dos"));
         Assert.IsFalse(list.Contains("cuatro"));
     }
@@ -360,9 +360,9 @@ public sealed class Test1
         list.Add(10);
         list.Add(20);
         list.Add(30);
-        
+
         bool result = list.Remove(20);
-        
+
         Assert.IsTrue(result);
         Assert.AreEqual(2, list.Count);
         Assert.IsFalse(list.Contains(20));
@@ -375,9 +375,9 @@ public sealed class Test1
         list.Add(10);
         list.Add(20);
         list.Add(30);
-        
+
         bool result = list.Remove(10);
-        
+
         Assert.IsTrue(result);
         Assert.AreEqual(2, list.Count);
         Assert.AreEqual(20, list.ElementAt(0));
@@ -390,9 +390,9 @@ public sealed class Test1
         list.Add(10);
         list.Add(20);
         list.Add(30);
-        
+
         bool result = list.Remove(30);
-        
+
         Assert.IsTrue(result);
         Assert.AreEqual(2, list.Count);
     }
@@ -403,9 +403,9 @@ public sealed class Test1
         var list = new LL.LinkedList<int>();
         list.Add(10);
         list.Add(20);
-        
+
         bool result = list.Remove(100);
-        
+
         Assert.IsFalse(result);
         Assert.AreEqual(2, list.Count);
     }
@@ -415,7 +415,7 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         bool result = list.Remove(10);
-        
+
         Assert.IsFalse(result);
         Assert.AreEqual(0, list.Count);
     }
@@ -427,9 +427,9 @@ public sealed class Test1
         list.Add("primero");
         list.Add(null);
         list.Add("tercero");
-        
+
         bool result = list.Remove(null);
-        
+
         Assert.IsTrue(result);
         Assert.AreEqual(2, list.Count);
         Assert.IsFalse(list.Contains(null));
@@ -440,9 +440,9 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         list.Add(10);
-        
+
         bool result = list.Remove(10);
-        
+
         Assert.IsTrue(result);
         Assert.AreEqual(0, list.Count);
     }
@@ -458,9 +458,9 @@ public sealed class Test1
         list.Add(10);
         list.Add(20);
         list.Add(30);
-        
+
         list.RemoveAt(0);
-        
+
         Assert.AreEqual(2, list.Count);
         Assert.AreEqual(20, list.ElementAt(0));
     }
@@ -472,9 +472,9 @@ public sealed class Test1
         list.Add(10);
         list.Add(20);
         list.Add(30);
-        
+
         list.RemoveAt(1);
-        
+
         Assert.AreEqual(2, list.Count);
         Assert.AreEqual(10, list.ElementAt(0));
         Assert.AreEqual(30, list.ElementAt(1));
@@ -487,9 +487,9 @@ public sealed class Test1
         list.Add(10);
         list.Add(20);
         list.Add(30);
-        
+
         list.RemoveAt(2);
-        
+
         Assert.AreEqual(2, list.Count);
     }
 
@@ -498,7 +498,7 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         list.Add(10);
-        
+
         try
         {
             list.RemoveAt(-1);
@@ -515,7 +515,7 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         list.Add(10);
-        
+
         try
         {
             list.RemoveAt(5);
@@ -531,7 +531,7 @@ public sealed class Test1
     public void RemoveAt_EmptyList_ThrowsException()
     {
         var list = new LL.LinkedList<int>();
-        
+
         try
         {
             list.RemoveAt(0);
@@ -554,9 +554,9 @@ public sealed class Test1
         list.Add(10);
         list.Add(20);
         list.Add(30);
-        
+
         list.Clear();
-        
+
         Assert.AreEqual(0, list.Count);
     }
 
@@ -565,7 +565,7 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         list.Clear();
-        
+
         Assert.AreEqual(0, list.Count);
     }
 
@@ -576,7 +576,7 @@ public sealed class Test1
         list.Add(10);
         list.Clear();
         list.Add(20);
-        
+
         Assert.AreEqual(1, list.Count);
         Assert.AreEqual(20, list.ElementAt(0));
     }
@@ -597,10 +597,10 @@ public sealed class Test1
     {
         var list = new LL.LinkedList<int>();
         Assert.AreEqual(0, list.Count);
-        
+
         list.Add(10);
         Assert.AreEqual(1, list.Count);
-        
+
         list.Add(20);
         Assert.AreEqual(2, list.Count);
     }
@@ -612,7 +612,7 @@ public sealed class Test1
         list.Add(10);
         list.Add(20);
         Assert.AreEqual(2, list.Count);
-        
+
         list.Remove(10);
         Assert.AreEqual(1, list.Count);
     }
@@ -625,30 +625,30 @@ public sealed class Test1
     public void Integration_ComplexOperations_WorkCorrectly()
     {
         var list = new LL.LinkedList<int>();
-        
+
         // Agregar elementos
         list.Add(10);
         list.Add(20);
         list.Add(30);
         Assert.AreEqual(3, list.Count);
-        
+
         // Insertar en medio
         list.Insert(1, 15);
         Assert.AreEqual(4, list.Count);
         Assert.AreEqual(15, list.ElementAt(1));
-        
+
         // Modificar valor
         list.Set(2, 25);
         Assert.AreEqual(25, list.ElementAt(2));
-        
+
         // Verificar contiene
         Assert.IsTrue(list.Contains(25));
         Assert.IsFalse(list.Contains(20));
-        
+
         // Eliminar por valor
         list.Remove(15);
         Assert.AreEqual(3, list.Count);
-        
+
         // Eliminar por índice
         list.RemoveAt(0);
         Assert.AreEqual(2, list.Count);
@@ -659,18 +659,18 @@ public sealed class Test1
     public void Integration_WithStrings_WorksCorrectly()
     {
         var list = new LL.LinkedList<string>();
-        
+
         list.Add("Hola");
         list.Add("Mundo");
         list.Add("!");
-        
+
         Assert.AreEqual(3, list.Count);
         Assert.AreEqual("Mundo", list.ElementAt(1));
-        
+
         list.Insert(1, "Hermoso");
         Assert.AreEqual("Hermoso", list.ElementAt(1));
         Assert.AreEqual("Mundo", list.ElementAt(2));
-        
+
         Assert.IsTrue(list.Contains("Hermoso"));
         list.Remove("Hermoso");
         Assert.IsFalse(list.Contains("Hermoso"));
@@ -680,17 +680,17 @@ public sealed class Test1
     public void Integration_WithDouble_WorksCorrectly()
     {
         var list = new LL.LinkedList<double>();
-        
+
         list.Add(3.14);
         list.Add(2.71);
         list.Add(1.41);
-        
+
         Assert.AreEqual(3, list.Count);
         Assert.AreEqual(2.71, list.ElementAt(1));
-        
+
         list.Set(1, 2.72);
         Assert.AreEqual(2.72, list.ElementAt(1));
-        
+
         Assert.IsTrue(list.Contains(3.14));
         list.Remove(3.14);
         Assert.IsFalse(list.Contains(3.14));
@@ -699,4 +699,3 @@ public sealed class Test1
 
     #endregion
 }
-

@@ -1,4 +1,4 @@
-﻿using LL;
+﻿using GenericLinkedList;
 
 namespace ConsoleLL;
 
@@ -26,7 +26,7 @@ class Program
 
         // 3. Insert - Insertar en posiciones específicas
         Console.WriteLine("\n3. Insertando elementos en posiciones específicas:");
-        lista.Insert(0, 5);  // Insertar al principio
+        lista.Insert(0, 5); // Insertar al principio
         Console.WriteLine($"   Insertado 5 al inicio");
         lista.Insert(3, 25); // Insertar en medio
         Console.WriteLine($"   Insertado 25 en índice 3");
@@ -74,7 +74,7 @@ class Program
         nombres.Add("Elena");
         nombres.Add("David");
         MostrarLista(nombres);
-        
+
         nombres.Insert(2, "Beatriz");
         Console.WriteLine("   Insertando 'Beatriz' en índice 2:");
         MostrarLista(nombres);
@@ -94,7 +94,8 @@ class Program
         for (int i = 0; i < lista.Count; i++)
         {
             Console.Write(lista.ElementAt(i));
-            if (i < lista.Count - 1) Console.Write(", ");
+            if (i < lista.Count - 1)
+                Console.Write(", ");
         }
         Console.WriteLine($"] (Count: {lista.Count})");
     }
