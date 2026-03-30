@@ -84,7 +84,7 @@ public sealed class Test1
     {
         var list = new LinkedList();
         list.Add(10);
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list.ElementAt(-1));
+        Assert.Throws<IndexOutOfRangeException>(() => list.ElementAt(-1));
     }
 
     [TestMethod]
@@ -92,14 +92,14 @@ public sealed class Test1
     {
         var list = new LinkedList();
         list.Add(10);
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list.ElementAt(5));
+        Assert.Throws<IndexOutOfRangeException>(() => list.ElementAt(5));
     }
 
     [TestMethod]
     public void ElementAt_EmptyList_ThrowsException()
     {
         var list = new LinkedList();
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list.ElementAt(0));
+        Assert.Throws<IndexOutOfRangeException>(() => list.ElementAt(0));
     }
 
     #endregion
@@ -141,7 +141,7 @@ public sealed class Test1
     {
         var list = new LinkedList();
         list.Add(10);
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list.Set(-1, 100));
+        Assert.Throws<IndexOutOfRangeException>(() => list.Set(-1, 100));
     }
 
     [TestMethod]
@@ -149,7 +149,7 @@ public sealed class Test1
     {
         var list = new LinkedList();
         list.Add(10);
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list.Set(5, 100));
+        Assert.Throws<IndexOutOfRangeException>(() => list.Set(5, 100));
     }
 
     #endregion
@@ -211,7 +211,7 @@ public sealed class Test1
     {
         var list = new LinkedList();
         list.Add(10);
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list.Insert(-1, 5));
+        Assert.Throws<IndexOutOfRangeException>(() => list.Insert(-1, 5));
     }
 
     [TestMethod]
@@ -219,7 +219,7 @@ public sealed class Test1
     {
         var list = new LinkedList();
         list.Add(10);
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list.Insert(5, 100));
+        Assert.Throws<IndexOutOfRangeException>(() => list.Insert(5, 100));
     }
 
     #endregion
@@ -436,7 +436,7 @@ public sealed class Test1
     {
         var list = new LinkedList();
         list.Add(10);
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list.RemoveAt(-1));
+        Assert.Throws<IndexOutOfRangeException>(() => list.RemoveAt(-1));
     }
 
     [TestMethod]
@@ -444,14 +444,14 @@ public sealed class Test1
     {
         var list = new LinkedList();
         list.Add(10);
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list.RemoveAt(5));
+        Assert.Throws<IndexOutOfRangeException>(() => list.RemoveAt(5));
     }
 
     [TestMethod]
     public void RemoveAt_EmptyList_ThrowsException()
     {
         var list = new LinkedList();
-        Assert.ThrowsException<IndexOutOfRangeException>(() => list.RemoveAt(0));
+        Assert.Throws<IndexOutOfRangeException>(() => list.RemoveAt(0));
     }
 
     #endregion
