@@ -36,7 +36,7 @@ public class SortedList
     public object? ElementAt(int index)
     {
         if (index < 0 || index >= list.Count)
-            throw new ArgumentOutOfRangeException(nameof(index));
+            throw new IndexOutOfRangeException(nameof(index));
 
         return list.ElementAt(index);
     }
@@ -54,7 +54,7 @@ public class SortedList
     public void RemoveAt(int index)
     {
         if (index < 0 || index >= list.Count)
-            throw new ArgumentOutOfRangeException(nameof(index));
+            throw new IndexOutOfRangeException(nameof(index));
 
         list.RemoveAt(index);
     }
