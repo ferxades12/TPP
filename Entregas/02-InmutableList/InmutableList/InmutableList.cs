@@ -30,6 +30,9 @@ public class InmutableList
 
     public object? ElementAt(int index)
     {
+        if (index < 0 || index >= Count)
+            throw new IndexOutOfRangeException();
+
         return arr[index];
     }
 

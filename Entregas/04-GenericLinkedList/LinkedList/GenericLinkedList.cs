@@ -41,15 +41,16 @@ public class LinkedList<T> : IEnumerable<T>
 
     public T? ElementAt(int index)
     {
+        if (index < 0 || index >= Count)
+            throw new IndexOutOfRangeException();
+
         return NodeAt(index).Data;
     }
 
     private Node<T> NodeAt(int index)
     {
-        if (head == null || index < 0)
-        {
+        if (head == null || index < 0 || index >= Count)
             throw new IndexOutOfRangeException();
-        }
 
         Node<T> current = head;
 
@@ -67,6 +68,9 @@ public class LinkedList<T> : IEnumerable<T>
 
     public void Set(int index, T? item)
     {
+        if (index < 0 || index >= Count)
+            throw new IndexOutOfRangeException();
+
         Node<T> targetNode = this.NodeAt(index);
         targetNode.Data = item;
     }
@@ -156,6 +160,7 @@ public class LinkedList<T> : IEnumerable<T>
     {
         if (index < 0 || index >= Count)
             throw new IndexOutOfRangeException();
+
         if (index == 0)
         {
             if (head == null)

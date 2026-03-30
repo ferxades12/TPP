@@ -39,12 +39,15 @@ public class LinkedList
 
     public Object? ElementAt(int index)
     {
+        if (index < 0 || index >= Count)
+            throw new IndexOutOfRangeException();
+
         return NodeAt(index).Data;
     }
 
     private Node NodeAt(int index)
     {
-        if (head == null || index < 0)
+        if (head == null || index < 0 || index >= Count)
         {
             throw new IndexOutOfRangeException();
         }
@@ -152,6 +155,9 @@ public class LinkedList
 
     public void RemoveAt(int index)
     {
+        if (index < 0 || index >= Count)
+            throw new IndexOutOfRangeException();
+
         if (index == 0)
         {
             if (head == null)
