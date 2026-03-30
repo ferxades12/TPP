@@ -1,14 +1,14 @@
 namespace GenericLinkedList;
 
 [TestClass]
-public sealed class Test1
+public sealed class TestGenericLL
 {
     #region Add Tests
 
     [TestMethod]
     public void Add_SingleElement_CountIsOne()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         Assert.AreEqual(1, list.Count);
     }
@@ -16,7 +16,7 @@ public sealed class Test1
     [TestMethod]
     public void Add_MultipleElements_CountIsCorrect()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Add(30);
@@ -26,7 +26,7 @@ public sealed class Test1
     [TestMethod]
     public void Add_WithStrings_ElementsAreAdded()
     {
-        var list = new LL.LinkedList<string>();
+        var list = new LinkedList<string>();
         list.Add("Hola");
         list.Add("Mundo");
         list.Add("!");
@@ -36,7 +36,7 @@ public sealed class Test1
     [TestMethod]
     public void Add_NullableType_NullIsAdded()
     {
-        var list = new LL.LinkedList<string?>();
+        var list = new LinkedList<string?>();
         list.Add(null);
         Assert.AreEqual(1, list.Count);
         Assert.IsNull(list.ElementAt(0));
@@ -49,7 +49,7 @@ public sealed class Test1
     [TestMethod]
     public void ElementAt_FirstElement_ReturnsCorrectValue()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         Assert.AreEqual(10, list.ElementAt(0));
@@ -58,7 +58,7 @@ public sealed class Test1
     [TestMethod]
     public void ElementAt_LastElement_ReturnsCorrectValue()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Add(30);
@@ -68,7 +68,7 @@ public sealed class Test1
     [TestMethod]
     public void ElementAt_WithStrings_ReturnsCorrectValues()
     {
-        var list = new LL.LinkedList<string>();
+        var list = new LinkedList<string>();
         list.Add("primero");
         list.Add("segundo");
         list.Add("tercero");
@@ -81,7 +81,7 @@ public sealed class Test1
     [TestMethod]
     public void ElementAt_NegativeIndex_ThrowsException()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
 
         try
@@ -98,7 +98,7 @@ public sealed class Test1
     [TestMethod]
     public void ElementAt_IndexOutOfRange_ThrowsException()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
 
         try
@@ -115,7 +115,7 @@ public sealed class Test1
     [TestMethod]
     public void ElementAt_EmptyList_ThrowsException()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
 
         try
         {
@@ -135,7 +135,7 @@ public sealed class Test1
     [TestMethod]
     public void Set_FirstElement_ValueIsUpdated()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Set(0, 100);
@@ -145,7 +145,7 @@ public sealed class Test1
     [TestMethod]
     public void Set_LastElement_ValueIsUpdated()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Add(30);
@@ -156,7 +156,7 @@ public sealed class Test1
     [TestMethod]
     public void Set_ToNull_ValueIsSetToNull()
     {
-        var list = new LL.LinkedList<string?>();
+        var list = new LinkedList<string?>();
         list.Add("valor");
         list.Set(0, null);
         Assert.IsNull(list.ElementAt(0));
@@ -165,7 +165,7 @@ public sealed class Test1
     [TestMethod]
     public void Set_NegativeIndex_ThrowsException()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
 
         try
@@ -182,7 +182,7 @@ public sealed class Test1
     [TestMethod]
     public void Set_IndexOutOfRange_ThrowsException()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
 
         try
@@ -203,7 +203,7 @@ public sealed class Test1
     [TestMethod]
     public void Insert_AtBeginning_ElementIsInserted()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(20);
         list.Add(30);
         list.Insert(0, 10);
@@ -217,7 +217,7 @@ public sealed class Test1
     [TestMethod]
     public void Insert_InMiddle_ElementIsInserted()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(30);
         list.Insert(1, 20);
@@ -231,7 +231,7 @@ public sealed class Test1
     [TestMethod]
     public void Insert_AtEnd_ElementIsInserted()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Insert(2, 30);
@@ -243,7 +243,7 @@ public sealed class Test1
     [TestMethod]
     public void Insert_InEmptyList_ElementIsInserted()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Insert(0, 10);
 
         Assert.AreEqual(1, list.Count);
@@ -253,7 +253,7 @@ public sealed class Test1
     [TestMethod]
     public void Insert_NegativeIndex_ThrowsException()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
 
         try
@@ -270,7 +270,7 @@ public sealed class Test1
     [TestMethod]
     public void Insert_IndexOutOfRange_ThrowsException()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
 
         try
@@ -291,7 +291,7 @@ public sealed class Test1
     [TestMethod]
     public void Contains_ExistingElement_ReturnsTrue()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Add(30);
@@ -302,7 +302,7 @@ public sealed class Test1
     [TestMethod]
     public void Contains_NonExistingElement_ReturnsFalse()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
 
@@ -312,14 +312,14 @@ public sealed class Test1
     [TestMethod]
     public void Contains_EmptyList_ReturnsFalse()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         Assert.IsFalse(list.Contains(10));
     }
 
     [TestMethod]
     public void Contains_NullInList_ReturnsTrue()
     {
-        var list = new LL.LinkedList<string?>();
+        var list = new LinkedList<string?>();
         list.Add("primero");
         list.Add(null);
         list.Add("tercero");
@@ -330,7 +330,7 @@ public sealed class Test1
     [TestMethod]
     public void Contains_SearchNullInListWithoutNull_ReturnsFalse()
     {
-        var list = new LL.LinkedList<string?>();
+        var list = new LinkedList<string?>();
         list.Add("primero");
         list.Add("segundo");
 
@@ -340,7 +340,7 @@ public sealed class Test1
     [TestMethod]
     public void Contains_WithStrings_FindsCorrectValue()
     {
-        var list = new LL.LinkedList<string>();
+        var list = new LinkedList<string>();
         list.Add("uno");
         list.Add("dos");
         list.Add("tres");
@@ -356,7 +356,7 @@ public sealed class Test1
     [TestMethod]
     public void Remove_ExistingElement_RemovesAndReturnsTrue()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Add(30);
@@ -371,7 +371,7 @@ public sealed class Test1
     [TestMethod]
     public void Remove_FirstElement_RemovesCorrectly()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Add(30);
@@ -386,7 +386,7 @@ public sealed class Test1
     [TestMethod]
     public void Remove_LastElement_RemovesCorrectly()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Add(30);
@@ -400,7 +400,7 @@ public sealed class Test1
     [TestMethod]
     public void Remove_NonExistingElement_ReturnsFalse()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
 
@@ -413,7 +413,7 @@ public sealed class Test1
     [TestMethod]
     public void Remove_FromEmptyList_ReturnsFalse()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         bool result = list.Remove(10);
 
         Assert.IsFalse(result);
@@ -423,7 +423,7 @@ public sealed class Test1
     [TestMethod]
     public void Remove_NullValue_RemovesNullAndReturnsTrue()
     {
-        var list = new LL.LinkedList<string?>();
+        var list = new LinkedList<string?>();
         list.Add("primero");
         list.Add(null);
         list.Add("tercero");
@@ -438,7 +438,7 @@ public sealed class Test1
     [TestMethod]
     public void Remove_OnlyElement_ListBecomesEmpty()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
 
         bool result = list.Remove(10);
@@ -454,7 +454,7 @@ public sealed class Test1
     [TestMethod]
     public void RemoveAt_FirstElement_RemovesCorrectly()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Add(30);
@@ -468,7 +468,7 @@ public sealed class Test1
     [TestMethod]
     public void RemoveAt_MiddleElement_RemovesCorrectly()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Add(30);
@@ -483,7 +483,7 @@ public sealed class Test1
     [TestMethod]
     public void RemoveAt_LastElement_RemovesCorrectly()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Add(30);
@@ -496,7 +496,7 @@ public sealed class Test1
     [TestMethod]
     public void RemoveAt_NegativeIndex_ThrowsException()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
 
         try
@@ -513,7 +513,7 @@ public sealed class Test1
     [TestMethod]
     public void RemoveAt_IndexOutOfRange_ThrowsException()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
 
         try
@@ -530,7 +530,7 @@ public sealed class Test1
     [TestMethod]
     public void RemoveAt_EmptyList_ThrowsException()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
 
         try
         {
@@ -550,7 +550,7 @@ public sealed class Test1
     [TestMethod]
     public void Clear_ListWithElements_BecomesEmpty()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         list.Add(30);
@@ -563,7 +563,7 @@ public sealed class Test1
     [TestMethod]
     public void Clear_EmptyList_RemainsEmpty()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Clear();
 
         Assert.AreEqual(0, list.Count);
@@ -572,7 +572,7 @@ public sealed class Test1
     [TestMethod]
     public void Clear_AfterClear_CanAddNewElements()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Clear();
         list.Add(20);
@@ -588,14 +588,14 @@ public sealed class Test1
     [TestMethod]
     public void Count_EmptyList_ReturnsZero()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         Assert.AreEqual(0, list.Count);
     }
 
     [TestMethod]
     public void Count_AfterAdd_IncrementsCorrectly()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         Assert.AreEqual(0, list.Count);
 
         list.Add(10);
@@ -608,7 +608,7 @@ public sealed class Test1
     [TestMethod]
     public void Count_AfterRemove_DecrementsCorrectly()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
         list.Add(10);
         list.Add(20);
         Assert.AreEqual(2, list.Count);
@@ -624,7 +624,7 @@ public sealed class Test1
     [TestMethod]
     public void Integration_ComplexOperations_WorkCorrectly()
     {
-        var list = new LL.LinkedList<int>();
+        var list = new LinkedList<int>();
 
         // Agregar elementos
         list.Add(10);
@@ -658,7 +658,7 @@ public sealed class Test1
     [TestMethod]
     public void Integration_WithStrings_WorksCorrectly()
     {
-        var list = new LL.LinkedList<string>();
+        var list = new LinkedList<string>();
 
         list.Add("Hola");
         list.Add("Mundo");
@@ -679,7 +679,7 @@ public sealed class Test1
     [TestMethod]
     public void Integration_WithDouble_WorksCorrectly()
     {
-        var list = new LL.LinkedList<double>();
+        var list = new LinkedList<double>();
 
         list.Add(3.14);
         list.Add(2.71);
