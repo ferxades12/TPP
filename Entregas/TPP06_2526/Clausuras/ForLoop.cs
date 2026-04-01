@@ -1,6 +1,6 @@
 ﻿namespace Clausuras;
 
-public class Clausuras
+public class ForLoopClass
 {
     /* static void Main(){
         int i = -10;
