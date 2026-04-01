@@ -42,7 +42,7 @@ public record None<TData>() : Maybe<TData>
     public TData OrElse(TData defaultValue) => defaultValue;
 }
 
-public static class Maybe{
-    public static Maybe<T> Some<T> (T value) => new Some<T>(value);
-    public static Maybe<T> None<T> () => new None<T>();
+public static class FMaybe{
+    public static Maybe<T> Some<T> (T arg) => new Some<T>(arg);
+    public static Maybe<T> None<T> () => new None<T>();      
 }
