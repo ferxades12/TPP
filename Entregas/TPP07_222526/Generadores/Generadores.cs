@@ -22,11 +22,12 @@ public class Generadores
 
     public static IEnumerable<T3>  Zip<T1, T2, T3>(IEnumerable<T1> secuencia1, IEnumerable<T2> secuencia2, Func<T1, T2, T3> funcion)
     {
-        IEnumerator<T1> e1 = secuencia1.GetEnumerator();
-        IEnumerator<T2> e2 = secuencia2.GetEnumerator();
-        
-        while(e1.MoveNext() && e2.MoveNext())
-            yield return funcion(e1.Current, e2.Current);
+        using (var e1 = secuencia1.GetEnumerator())
+        using (var e2 = secuencia2.GetEnumerator())
+        {
+            while(e1.MoveNext() && e2.MoveNext())
+                yield return funcion(e1.Current, e2.Current);
+        }
     }
 
     public static IEnumerable<T1> Take<T1>(IEnumerable<T1> secuencia, int n)
@@ -47,7 +48,7 @@ public class Generadores
             if (funcion(elemento)){
                 yield return elemento;
             }else{
-                return;
+                yield break;
             }
         }
     }
