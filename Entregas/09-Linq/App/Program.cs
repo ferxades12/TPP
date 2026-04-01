@@ -1,4 +1,4 @@
-﻿namespace tpp.lab09;
+﻿namespace linq;
 
 using System.Linq;
 
