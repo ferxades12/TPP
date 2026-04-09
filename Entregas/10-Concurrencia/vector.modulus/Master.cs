@@ -20,8 +20,8 @@ namespace activity10 {
         private int numberOfThreads;
         private int value;
 
-        public Master(int value, int numberOfThreads) {
-            data = activity10.Utils.GetBitcoinData();
+        public Master(int value, int numberOfThreads, BitcoinValueData[] data) {
+            this.data = data;
             if (numberOfThreads < 1 || numberOfThreads > data.Length)
                 throw new ArgumentException("The number of threads must be lower or equal to the elements of the vector");
             this.numberOfThreads = numberOfThreads;

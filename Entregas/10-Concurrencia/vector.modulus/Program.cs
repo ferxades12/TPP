@@ -11,13 +11,18 @@ namespace activity10
             const int value = 7000;
             const int maximoHilos = 50;
             Stopwatch stopWatch = new Stopwatch();
+            var data = activity10.Utils.GetBitcoinData();
+
+            var warmupMaster = new Master(value, 1, data);
+            warmupMaster.ComputeNumTimesGreaterThan();
+            GC.Collect();
+            GC.WaitForFullGCComplete();
 
             for (int numeroHilos = 1; numeroHilos <= maximoHilos; numeroHilos++)
             {
+                Master master = new Master(value, numeroHilos, data);
                 for (int numEx = 0; numEx < 15; numEx++)
                 {
-                    Master master = new Master(value, numeroHilos);
-
                     stopWatch.Restart();
                     double resultado = master.ComputeNumTimesGreaterThan();
                     stopWatch.Stop();
