@@ -4,7 +4,7 @@ using activity10;
 
 namespace activity10
 {
-    public class VectorModulusProgram
+    public class Program
     {
         static void Main(string[] args)
         {
