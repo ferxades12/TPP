@@ -5,7 +5,7 @@ library(lpSolve)
 # Coeficientes de la función objetivo
 # Representan el beneficio o coste unitario de cada variable.
 coef <- c(940, 1220, 560, 760)
-
+# No negatividad
 # Matriz de coeficientes tecnológicos 
 A <- rbind(c(1,0,1,0),
            c(0,1,0,1),
@@ -35,10 +35,6 @@ sol$objval
 sol$solution 
 
 
-# Rangos entre los que pueden variar los coeficientes sin que cambie la base óptima
-sol$sens.coef.from # Límite inferior 
-sol$sens.coef.to   # Límite superior
-
 # Costes reducidos (últimos n elementos de sol$duals)
 # Significado: 
 # 1. Si la variable es no básica, indica cuánto debe mejorar su coeficiente 
@@ -53,7 +49,7 @@ sol$duals[(length(sol$duals) - n_vars + 1):length(sol$duals)]
 # Valor > 0: Restricción con sobrante (no condiciona el óptimo de forma directa)
 round(abs(A %*% sol$solution - b), 4)
 
-# Precios sombra (primeros m elementos de sol$duals)
+# Precios sombra (primeros m elementos de sol$duals) Columnas de la tabla
 # Significado: Aumento del valor de la función objetivo por cada unidad adicional del recurso.
 # Es el precio máximo a pagar por una unidad extra del recurso
 m_restr <- length(b)
@@ -66,6 +62,7 @@ sol$duals.to[1:m_restr]   # Límite superior
 
 # Cálculo de nueva función objetivo ante cambios en b:
 # z_nueva = z_actual + (precio_sombra * cambio_en_recurso)
+holguras = b-A%*%sol$solution
 
 
 # Mirar que pasaria si tenemos 4300h de trabajo
@@ -74,3 +71,10 @@ holguras[3]
 psombra[3] # Si aumentasemos las horas ganariamos esto
 c(sol$duals.from[3], sol$duals.to[3]) # Mientras estemos en este intervalo
 sol$objval + 300 *psombra[3] # Nuevo valor
+
+
+# Ver intervalo de coeficientes
+sol$sens.coef.from[4]
+sol$sens.coef.to[4]
+coef[4] = 0.7
+coef%*%sol$solution # Nueva solucion
