@@ -43,9 +43,7 @@ class Program
         Parallel.For<List<int>>(
             0, //Inicio
             vector.Length, // Recuerda, no inclusivo
-
             () => new List<int>(), // Inicialización del resultado local de cada partición
-
             (i, loopState, posicionesLocal) => // Para cada iteración.
             {
                 if (EsPrimo(vector[i]))
@@ -53,8 +51,7 @@ class Program
 
                 return posicionesLocal;
             },
-
-            posicionesLocalFinal =>  // Agregación final del resultado local de cada partición
+            posicionesLocalFinal => // Agregación final del resultado local de cada partición
             {
                 lock (bloqueo)
                 {

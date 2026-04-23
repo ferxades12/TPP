@@ -32,10 +32,7 @@ class Program
         Stopwatch sw = Stopwatch.StartNew();
 
         double modulo = Math.Sqrt(
-            vector.Aggregate<short, long>(
-                0L,
-                (acc, item) => acc + (long)item * item
-            )
+            vector.Aggregate<short, long>(0L, (acc, item) => acc + (long)item * item)
         );
 
         sw.Stop();
@@ -47,14 +44,13 @@ class Program
         Stopwatch sw = Stopwatch.StartNew();
 
         double modulo = Math.Sqrt(
-            vector.AsParallel().Aggregate<short, long>(
-                0L,
-                (acc, item) => acc + (long)item * item
-            )
+            vector.AsParallel().Aggregate<short, long>(0L, (acc, item) => acc + (long)item * item)
         );
 
         sw.Stop();
-        Console.WriteLine($"PLINQ con un Aggregate: {sw.ElapsedMilliseconds} ms. Módulo = {modulo}");
+        Console.WriteLine(
+            $"PLINQ con un Aggregate: {sw.ElapsedMilliseconds} ms. Módulo = {modulo}"
+        );
     }
 
     static void ModuloPlinqSelectAggregate(short[] vector)
@@ -62,16 +58,16 @@ class Program
         Stopwatch sw = Stopwatch.StartNew();
 
         double modulo = Math.Sqrt(
-            vector.AsParallel()
-                    .Select(item => (long)item * item)
-                    .Aggregate(
-                        0L,
-                        (acc, item) => acc + item
-                    )
+            vector
+                .AsParallel()
+                .Select(item => (long)item * item)
+                .Aggregate(0L, (acc, item) => acc + item)
         );
 
         sw.Stop();
-        Console.WriteLine($"PLINQ con Select + Aggregate: {sw.ElapsedMilliseconds} ms. Módulo = {modulo}");
+        Console.WriteLine(
+            $"PLINQ con Select + Aggregate: {sw.ElapsedMilliseconds} ms. Módulo = {modulo}"
+        );
     }
 
     static void ModuloPlinqLocales(short[] vector)
@@ -79,12 +75,14 @@ class Program
         Stopwatch sw = Stopwatch.StartNew();
 
         double modulo = Math.Sqrt(
-            vector.AsParallel().Aggregate<short, long, long>(
-                () => 0L,                                // acumulador local inicial
-                (acc, item) => acc + (long)item * item, // actualiza el acumulador local
-                (acc1, acc2) => acc1 + acc2,            // combina parciales
-                finalResult => finalResult              // resultado final, lo devuelvo para almacenarlo
-            )
+            vector
+                .AsParallel()
+                .Aggregate<short, long, long>(
+                    () => 0L, // acumulador local inicial
+                    (acc, item) => acc + (long)item * item, // actualiza el acumulador local
+                    (acc1, acc2) => acc1 + acc2, // combina parciales
+                    finalResult => finalResult // resultado final, lo devuelvo para almacenarlo
+                )
         );
 
         sw.Stop();
@@ -101,5 +99,4 @@ class Program
 
         return vector;
     }
-
 }
